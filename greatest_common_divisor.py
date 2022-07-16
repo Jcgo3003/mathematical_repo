@@ -11,13 +11,23 @@ for i in range(1, m+1):
 	if(x % i == 0 and y % i ==0):
 		sol = i
 		
-print('The greatest common factor is ')
-print(sol)
+print('- Sol 1 -')
+print('The greatest common factor')
+print(sol) # >> 9
+
+# sol 2
+def func_gcd(x,y): 
+    return y and func_gcd(y, x % y) or x
+
+print('- Sol 2 -')
+print(func_gcd(18, 63))
+
+
 
 # Math
-print('Library')
 a = math.gcd(x, y)
 
+print('- Sol 3 -')
 print('The greatest common factor is ')
 print(a)
 print(int(x / a), int(y /a))
